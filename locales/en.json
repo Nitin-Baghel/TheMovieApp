@@ -1,0 +1,10 @@
+{
+  "login": "Login",
+  "submit": "Submit",
+  "email": "Email",
+  "password": "Password",
+  "popularMovies": "Popular Movies",
+  "enterValidEmail": "Enter a valid email address",
+  "passwordRequirements": "Password must be 8-15 characters with at least one uppercase letter and one special character",
+  "loginSuccessful": "Login Successful!"
+}
