@@ -1,18 +1,18 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:1:1-25:12
-MERGED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:1:1-25:12
-INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml:2:1-9:12
-INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml:2:1-9:12
-INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml:2:1-9:12
+ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:1:1-25:12
+MERGED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:1:1-25:12
+INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml:2:1-9:12
+INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml:2:1-9:12
+INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:flipper-integration:0.73.4] /home/nitin/.gradle/caches/transforms-3/1af6da98205d2b9904caa399785386e9/transformed/jetified-flipper-integration-0.73.4-debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:react-native-community_blur] /home/nitin/Documents/MovieApp/node_modules/@react-native-community/blur/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:react-native-community_masked-view] /home/nitin/Documents/MovieApp/node_modules/@react-native-community/masked-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:react-native-gesture-handler] /home/nitin/Documents/MovieApp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:react-native-reanimated] /home/nitin/Documents/MovieApp/node_modules/react-native-reanimated/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:react-native-safe-area-context] /home/nitin/Documents/MovieApp/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:react-native-screens] /home/nitin/Documents/MovieApp/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:react-native-vector-icons] /home/nitin/Documents/MovieApp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-community_blur] /home/nitin/Desktop/TheMovieApp/node_modules/@react-native-community/blur/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-community_masked-view] /home/nitin/Desktop/TheMovieApp/node_modules/@react-native-community/masked-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-gesture-handler] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-reanimated] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-reanimated/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-safe-area-context] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-screens] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-vector-icons] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.react:react-android:0.73.4] /home/nitin/.gradle/caches/transforms-3/b4db2f23f2ab214a51186ce21dfe946e/transformed/jetified-react-android-0.73.4-debug/AndroidManifest.xml:2:1-24:12
 MERGED from [com.facebook.fresco:flipper-fresco-plugin:3.1.3] /home/nitin/.gradle/caches/transforms-3/2b5ba21ddda073e33e012f0d689623c6/transformed/jetified-flipper-fresco-plugin-3.1.3/AndroidManifest.xml:8:1-13:12
 MERGED from [com.facebook.fresco:flipper:3.1.3] /home/nitin/.gradle/caches/transforms-3/78a2f7f2f5ffb04c17532765310fabea/transformed/jetified-flipper-3.1.3/AndroidManifest.xml:2:1-7:12
@@ -84,26 +84,26 @@ MERGED from [com.facebook.fbjni:fbjni:0.5.1] /home/nitin/.gradle/caches/transfor
 MERGED from [com.facebook.soloader:soloader:0.10.5] /home/nitin/.gradle/caches/transforms-3/03d018e18e7118763cc731de8f689ba0/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:2:1-17:12
 MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /home/nitin/.gradle/caches/transforms-3/9293682cb53936b0e929c86eac194797/transformed/jetified-openssl-1.1.1l-beta-1/AndroidManifest.xml:1:1-3:12
 	package
-		INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml:3:5-51
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:3:5-67
+ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:3:5-67
 MERGED from [com.facebook.flipper:flipper:0.201.0] /home/nitin/.gradle/caches/transforms-3/9b2c28bd5719adb7e465469e2ca76c12/transformed/jetified-flipper-0.201.0/AndroidManifest.xml:13:5-67
 MERGED from [com.facebook.flipper:flipper:0.201.0] /home/nitin/.gradle/caches/transforms-3/9b2c28bd5719adb7e465469e2ca76c12/transformed/jetified-flipper-0.201.0/AndroidManifest.xml:13:5-67
 	android:name
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:3:22-64
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:3:22-64
 application
-ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:5:5-24:19
-MERGED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:5:5-24:19
-MERGED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:5:5-24:19
-INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml:5:5-8:50
+ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:5:5-24:19
+MERGED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:5:5-24:19
+MERGED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:5:5-24:19
+INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml:5:5-8:50
 MERGED from [com.facebook.react:react-android:0.73.4] /home/nitin/.gradle/caches/transforms-3/b4db2f23f2ab214a51186ce21dfe946e/transformed/jetified-react-android-0.73.4-debug/AndroidManifest.xml:18:5-22:19
 MERGED from [com.facebook.react:react-android:0.73.4] /home/nitin/.gradle/caches/transforms-3/b4db2f23f2ab214a51186ce21dfe946e/transformed/jetified-react-android-0.73.4-debug/AndroidManifest.xml:18:5-22:19
 MERGED from [com.google.android.material:material:1.9.0] /home/nitin/.gradle/caches/transforms-3/d3a8a24834f295d8078f18b8298041f7/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
@@ -127,77 +127,77 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/nitin
 MERGED from [com.facebook.soloader:soloader:0.10.5] /home/nitin/.gradle/caches/transforms-3/03d018e18e7118763cc731de8f689ba0/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:11:5-15:19
 MERGED from [com.facebook.soloader:soloader:0.10.5] /home/nitin/.gradle/caches/transforms-3/03d018e18e7118763cc731de8f689ba0/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:11:5-15:19
 	android:extractNativeLibs
-		INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] /home/nitin/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:7:7-39
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:7:7-39
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:7:7-39
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:7:7-39
 	tools:ignore
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml:8:9-48
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml:8:9-48
 	android:roundIcon
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:9:7-52
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:9:7-52
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:9:7-52
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:9:7-52
 	tools:targetApi
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml:7:9-29
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml:7:9-29
 	android:icon
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:8:7-41
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:8:7-41
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:8:7-41
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:8:7-41
 	android:allowBackup
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:10:7-34
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:10:7-34
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:10:7-34
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:10:7-34
 	android:theme
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:11:7-38
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:11:7-38
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:11:7-38
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:11:7-38
 	android:usesCleartextTraffic
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml:6:9-44
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml:6:9-44
 	android:name
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:6:7-38
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:6:7-38
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:6:7-38
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:6:7-38
 activity#com.movieapp.MainActivity
-ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:12:7-23:18
+ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:12:7-23:18
 	android:label
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:14:9-41
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:14:9-41
 	android:launchMode
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:16:9-40
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:16:9-40
 	android:windowSoftInputMode
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:17:9-51
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:17:9-51
 	android:exported
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:18:9-32
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:18:9-32
 	android:configChanges
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:15:9-118
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:15:9-118
 	android:name
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:13:9-37
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:13:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:19:9-22:25
+ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:19:9-22:25
 action#android.intent.action.MAIN
-ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:20:13-65
+ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:20:13-65
 	android:name
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:20:21-62
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:20:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:21:13-73
+ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:21:13-73
 	android:name
-		ADDED from /home/nitin/Documents/MovieApp/android/app/src/main/AndroidManifest.xml:21:23-70
+		ADDED from /home/nitin/Desktop/TheMovieApp/android/app/src/main/AndroidManifest.xml:21:23-70
 uses-sdk
-INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml
-INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml
 MERGED from [com.facebook.react:flipper-integration:0.73.4] /home/nitin/.gradle/caches/transforms-3/1af6da98205d2b9904caa399785386e9/transformed/jetified-flipper-integration-0.73.4-debug/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.react:flipper-integration:0.73.4] /home/nitin/.gradle/caches/transforms-3/1af6da98205d2b9904caa399785386e9/transformed/jetified-flipper-integration-0.73.4-debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-community_blur] /home/nitin/Documents/MovieApp/node_modules/@react-native-community/blur/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-community_blur] /home/nitin/Documents/MovieApp/node_modules/@react-native-community/blur/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-community_masked-view] /home/nitin/Documents/MovieApp/node_modules/@react-native-community/masked-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-community_masked-view] /home/nitin/Documents/MovieApp/node_modules/@react-native-community/masked-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-gesture-handler] /home/nitin/Documents/MovieApp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-gesture-handler] /home/nitin/Documents/MovieApp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-reanimated] /home/nitin/Documents/MovieApp/node_modules/react-native-reanimated/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-reanimated] /home/nitin/Documents/MovieApp/node_modules/react-native-reanimated/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-safe-area-context] /home/nitin/Documents/MovieApp/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-safe-area-context] /home/nitin/Documents/MovieApp/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-screens] /home/nitin/Documents/MovieApp/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-screens] /home/nitin/Documents/MovieApp/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-vector-icons] /home/nitin/Documents/MovieApp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-vector-icons] /home/nitin/Documents/MovieApp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-community_blur] /home/nitin/Desktop/TheMovieApp/node_modules/@react-native-community/blur/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-community_blur] /home/nitin/Desktop/TheMovieApp/node_modules/@react-native-community/blur/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-community_masked-view] /home/nitin/Desktop/TheMovieApp/node_modules/@react-native-community/masked-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-community_masked-view] /home/nitin/Desktop/TheMovieApp/node_modules/@react-native-community/masked-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-gesture-handler] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-gesture-handler] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-reanimated] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-reanimated/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-reanimated] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-reanimated/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-safe-area-context] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-safe-area-context] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-screens] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-screens] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-vector-icons] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-vector-icons] /home/nitin/Desktop/TheMovieApp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.react:react-android:0.73.4] /home/nitin/.gradle/caches/transforms-3/b4db2f23f2ab214a51186ce21dfe946e/transformed/jetified-react-android-0.73.4-debug/AndroidManifest.xml:10:5-44
 MERGED from [com.facebook.react:react-android:0.73.4] /home/nitin/.gradle/caches/transforms-3/b4db2f23f2ab214a51186ce21dfe946e/transformed/jetified-react-android-0.73.4-debug/AndroidManifest.xml:10:5-44
 MERGED from [com.facebook.fresco:flipper-fresco-plugin:3.1.3] /home/nitin/.gradle/caches/transforms-3/2b5ba21ddda073e33e012f0d689623c6/transformed/jetified-flipper-fresco-plugin-3.1.3/AndroidManifest.xml:11:5-44
@@ -339,9 +339,9 @@ MERGED from [com.facebook.soloader:soloader:0.10.5] /home/nitin/.gradle/caches/t
 MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /home/nitin/.gradle/caches/transforms-3/9293682cb53936b0e929c86eac194797/transformed/jetified-openssl-1.1.1l-beta-1/AndroidManifest.xml:2:2-70
 MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /home/nitin/.gradle/caches/transforms-3/9293682cb53936b0e929c86eac194797/transformed/jetified-openssl-1.1.1l-beta-1/AndroidManifest.xml:2:2-70
 	android:targetSdkVersion
-		INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/nitin/Documents/MovieApp/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/nitin/Desktop/TheMovieApp/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from [com.facebook.react:react-android:0.73.4] /home/nitin/.gradle/caches/transforms-3/b4db2f23f2ab214a51186ce21dfe946e/transformed/jetified-react-android-0.73.4-debug/AndroidManifest.xml:16:5-78
 	android:name
