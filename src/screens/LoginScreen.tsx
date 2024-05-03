@@ -9,8 +9,8 @@ const LoginScreen = ({ navigation }) => {
   const { t, i18n } = useTranslation();
   const singleSelectRef = useRef<any>();
 
-  const [email, setEmail] = useState('nitin.baghel@gmail.com');
-  const [password, setPassword] = useState('Nagarro@12345');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [snackbarVisible, setSnackbarVisible] = useState(false);
 
   const [language, setLanguage] = useState<any>({
