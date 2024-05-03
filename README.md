@@ -1,7 +1,7 @@
 # TheMovieApp
 
 # Getting Started
-Demo App showcasing redux, redux-thunk, react-navigation, localization, pagination
+This App showcasing List of popular movies from TheMovieDB where user has to login to see the list of movies where I have used React Native, redux, redux-thunk, react-navigation, localization, pagination.
 To run this app create .key.js file at root of folder and paste **TheMovieDB** api auth token.
 
 ## Step 1: Start the Metro Server
