@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect } from "react";
 import {
   View,
   StyleSheet,
@@ -7,10 +7,7 @@ import {
   Dimensions,
 } from "react-native";
 import { Card, IconButton, Title } from "react-native-paper";
-import { getMovies } from "../store/movies/moviesAPI";
-import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
-import i18n from "i18next";
 import useFetchMovies from "../hooks/useFetchMovies";
 import withLoader from "../hoc/withLoader";
 import Loader from "../components/Loader";
@@ -27,26 +24,13 @@ export interface MovieStateProps {
 }
 
 const MoviesScreen = ({ navigation, showLoader }) => {
-  const [page, setPage] = useState(1);
   const { t } = useTranslation();
   const { data, isError, error, loadMore, isLoadMore, isLoading } =
     useFetchMovies();
 
-  const [movieList, setMovieList] = useState([]);
-  const [translated, setTranslated] = useState("");
-
-  const dispatch = useDispatch();
-
   useEffect(() => {
     showLoader(isLoading);
   }, [isLoading]);
-
-  useEffect(() => {
-    dispatch(getMovies(page));
-    return () => {
-      clearData();
-    };
-  }, []);
 
   const windowWidth = Dimensions.get("window").width;
 
