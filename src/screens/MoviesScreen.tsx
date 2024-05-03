@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import useFetchMovies from "../hooks/useFetchMovies";
 import withLoader from "../hoc/withLoader";
 import Loader from "../components/Loader";
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 interface MovieProps {
   title: string;
@@ -55,7 +56,7 @@ const MoviesScreen = ({ navigation, showLoader }) => {
     <View style={styles.container}>
       <View style={styles.header}>
         <IconButton
-          icon="camera"
+          icon={() => <Icon name="arrow-back" size={24} />}
           iconColor={"black"}
           size={20}
           onPress={() => navigation.navigate("Login")}

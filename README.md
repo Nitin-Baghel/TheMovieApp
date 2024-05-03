@@ -60,9 +60,12 @@ Screen 2 : Movie list Screen
   - API used for this screen is : https://api.themoviedb.org/3/movie/popular?language=en&page={page}&api_key={}
 
 ### ScreenShots
+
+<p float="left">
 <img height="600" width="300" src = "https://github.com/Nitin-Baghel/TheMovieApp/blob/main/src/assets/screenshots/1.png" />
 <img  height="600" width="300"  src = "https://github.com/Nitin-Baghel/TheMovieApp/blob/main/src/assets/screenshots/2.png" />
 <img  height="600" width="300"  src = "https://github.com/Nitin-Baghel/TheMovieApp/blob/main/src/assets/screenshots/3.png" />
 <img  height="600" width="300"  src = "https://github.com/Nitin-Baghel/TheMovieApp/blob/main/src/assets/screenshots/4.png" />
 <img  height="600" width="300"  src = "https://github.com/Nitin-Baghel/TheMovieApp/blob/main/src/assets/screenshots/5.png" />
 <img  height="600" width="300"  src = "https://github.com/Nitin-Baghel/TheMovieApp/blob/main/src/assets/screenshots/6.png" />
+</p>

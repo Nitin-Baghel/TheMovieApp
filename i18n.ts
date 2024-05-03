@@ -15,7 +15,6 @@ const resources = {
 
 i18n
   .use(initReactI18next) 
- 
   .init({
     resources,
     fallbackLng: 'en',
@@ -26,6 +25,5 @@ i18n
       escapeValue: false, 
     },
   });
-
 
 export default i18n;
