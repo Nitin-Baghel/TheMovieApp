@@ -1,14 +1,19 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import {View, StyleSheet, FlatList, Text, Dimensions} from 'react-native';
-import {Card, IconButton, Title} from 'react-native-paper';
-// import {useQuery} from 'react-query';
-import {getMovies} from '../store/movies/moviesAPI';
-import {useDispatch, useSelector} from 'react-redux';
-import {clearData} from '../store/movies/moviesSlice';
-import {useTranslation} from 'react-i18next';
-import {getTranslation} from '../utils/translate';
-import i18n from 'i18next';
-import { useNavigation } from '@react-navigation/native';
+import React, { useState, useEffect } from "react";
+import {
+  View,
+  StyleSheet,
+  FlatList,
+  Text,
+  Dimensions,
+} from "react-native";
+import { Card, IconButton, Title } from "react-native-paper";
+import { getMovies } from "../store/movies/moviesAPI";
+import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
+import useFetchMovies from "../hooks/useFetchMovies";
+import withLoader from "../hoc/withLoader";
+import Loader from "../components/Loader";
 
 interface MovieProps {
   title: string;
@@ -21,50 +26,38 @@ export interface MovieStateProps {
   loading: boolean;
 }
 
-const MoviesScreen = () => {
-  const {t} = useTranslation();
-  const navigation = useNavigation();
-
-  const {results, loading} = useSelector(
-    (state: {movies: MovieStateProps}) => state.movies,
-  );
+const MoviesScreen = ({ navigation, showLoader }) => {
+  const [page, setPage] = useState(1);
+  const { t } = useTranslation();
+  const { data, isError, error, loadMore, isLoadMore, isLoading } =
+    useFetchMovies();
 
   const [movieList, setMovieList] = useState([]);
-  const [translated, setTranslated] = useState('');
+  const [translated, setTranslated] = useState("");
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMovies());
-    // translate('The family Plan');
+    showLoader(isLoading);
+  }, [isLoading]);
+
+  useEffect(() => {
+    dispatch(getMovies(page));
     return () => {
       clearData();
     };
   }, []);
 
-  useEffect(() => {
-    setMovieList(results);
-  }, [results]);
+  const windowWidth = Dimensions.get("window").width;
 
-  const translate = word => {
-    console.log('i18n.language;;;;;;;;>', i18n.language);
-
-    getTranslation(word, i18n.language).then(transLated => {
-      setTranslated(transLated);
-      console.log('here::::::::::::::::::::::::::', transLated);
-    });
-
-    return t;
-  };
-
-  const windowWidth = Dimensions.get('window').width;
-
-  const renderMovieItem = ({item}) => (
-    <Card style={[styles.card, {width: windowWidth / 2 - 24}]}>
+  const MovieItem = ({ item }) => (
+    <Card style={[styles.card, { width: windowWidth / 2 - 24 }]}>
       <View style={styles.cardContent}>
         <Card.Cover
           style={styles.cardImage}
-          source={{uri: `https://image.tmdb.org/t/p/w500/${item?.poster_path}`}}
+          source={{
+            uri: `https://image.tmdb.org/t/p/w500/${item?.poster_path}`,
+          }}
         />
         <Card.Content>
           <Title>{item?.title}</Title>
@@ -73,32 +66,28 @@ const MoviesScreen = () => {
     </Card>
   );
 
-  if (loading) {
-    return (
-      <View>
-        <Text>Loading...</Text>
-      </View>
-    );
-  }
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <IconButton
           icon="camera"
-          iconColor={'black'}
+          iconColor={"black"}
           size={20}
-          onPress={() => navigation.navigate('Login')}
+          onPress={() => navigation.navigate("Login")}
         />
-        <Text style={styles.popularMovieTitle}>{t('popularMovies')}</Text>
+        <Text style={styles.popularMovieTitle}>{t("popularMovies")}</Text>
       </View>
-      {/* <Text>{translated}</Text> */}
+
       <FlatList
-        data={movieList}
-        keyExtractor={item => item?.id?.toString()}
-        renderItem={renderMovieItem}
-        horizontal={false}
+        contentContainerStyle={{ flexGrow: 1 }}
+        data={data}
+        renderItem={({ item }) => <MovieItem item={item} />}
+        onEndReached={loadMore}
+        onEndReachedThreshold={0.1}
         numColumns={2}
+        ListFooterComponent={isLoadMore ? <Loader /> : null}
+        keyExtractor={(item) => `${item.id.toString()}${Math.random()}`}
       />
     </View>
   );
@@ -108,34 +97,31 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-
   },
   card: {
     margin: 8,
-
-
   },
   cardContent: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     padding: 16,
   },
   cardImage: {
-    width: '100%',
+    width: "100%",
     aspectRatio: 2 / 3,
-    borderRadius: 8, // Optional: Add border-radius for a nicer look
+    borderRadius: 8,
   },
-popularMovieTitle: {
-    textAlign: 'left',
-    fontWeight: 'bold', // Make the text bold
-    fontSize: 18, // Set the font size to your desired value
-    color: 'black',
+  popularMovieTitle: {
+    textAlign: "left",
+    fontWeight: "bold",
+    fontSize: 18,
+    color: "black",
   },
-header: {
+  header: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
 });
 
-export default MoviesScreen;
+export default withLoader(MoviesScreen);

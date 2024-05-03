@@ -2,17 +2,16 @@ import React, { useState, useRef } from 'react';
 import { BlurView } from '@react-native-community/blur';
 import { View, StyleSheet, ImageBackground } from 'react-native';
 import { TextInput, Button, Snackbar, HelperText } from 'react-native-paper';
-import { useTranslation } from 'react-i18next'; // Import useTranslation hook
+import { useTranslation } from 'react-i18next';
 import { PaperSelect } from 'react-native-paper-select';
 
 const LoginScreen = ({ navigation }) => {
-  const { t, i18n } = useTranslation(); // Use the useTranslation hook
+  const { t, i18n } = useTranslation();
   const singleSelectRef = useRef<any>();
 
   const [email, setEmail] = useState('nitin.baghel@gmail.com');
   const [password, setPassword] = useState('Nagarro@12345');
   const [snackbarVisible, setSnackbarVisible] = useState(false);
-  // const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
   const [language, setLanguage] = useState<any>({
     value: i18n.language,
@@ -36,14 +35,8 @@ const LoginScreen = ({ navigation }) => {
 
   const handleSubmit = () => {
     setSnackbarVisible(true);
-    // Navigate to the next screen (replace 'NextScreen' with your actual screen name)
     navigation.replace('Movies');
   };
-
-  // const handleLanguageChange = language => {
-  //   i18n.changeLanguage(language);
-  //   setSelectedLanguage(language);
-  // };
 
   return (
     <ImageBackground
@@ -51,14 +44,12 @@ const LoginScreen = ({ navigation }) => {
       style={styles.imgContainer}
     >
       <BlurView
-        // style={styles.absolute}
         blurType="light"
         blurAmount={1}
         reducedTransparencyFallbackColor="white"
       />
       <View style={styles.container}>
 
-        {/* Add a language-switching button */}
         <View style={styles.languageSelectContainer}>
 
           <PaperSelect
@@ -81,12 +72,12 @@ const LoginScreen = ({ navigation }) => {
             dialogTitleStyle={{ color: 'black' }}
             textInputMode="flat"
             textInputStyle={{ fontWeight: '700', color: 'yellow' }}
-         
+
             hideSearchBox={true}
             theme={{
               colors: {
-                text: 'blue', // Change this to the desired text color
-                placeholder: 'gray', // Change this to the desired placeholder color
+                text: 'blue',
+                placeholder: 'gray',
               },
             }}
             textInputProps={{
@@ -107,9 +98,8 @@ const LoginScreen = ({ navigation }) => {
           autoCapitalize="none"
         />
         <HelperText type="error" visible={!isEmailValid()}>
-        {t('enterValidEmail')}
+          {t('enterValidEmail')}
         </HelperText>
-
         <TextInput
           label={t('password')}
           value={password}
@@ -117,11 +107,8 @@ const LoginScreen = ({ navigation }) => {
           secureTextEntry
         />
         <HelperText type="error" visible={!isPasswordValid()}>
-        {t('passwordRequirements')}
+          {t('passwordRequirements')}
         </HelperText>
-
-
-
         <Button
           mode="contained"
           onPress={handleSubmit}
@@ -148,13 +135,12 @@ const styles = StyleSheet.create({
   container: {
     padding: 16,
   },
-  languageSelectContainer: { 
+  languageSelectContainer: {
     position: 'absolute',
-    // top:0,
-    bottom: 400, 
-    right: 20, 
-    zIndex: 1, 
-    borderRadius:50
+    bottom: 400,
+    right: 20,
+    zIndex: 1,
+    borderRadius: 50
   },
   imgContainer: {
     flex: 1,

@@ -1,27 +1,26 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
+import { BASE_URL, popularMovies } from '../../utils/apiUtils';
+import { Movie,MovieApiResponse } from '../../screens/movies';
 
-const initialState = {
-  results: [],
-  loading: false,
-};
+interface QueryParam{
+  page:number
+  local:string
+}
 
-const moviesSlice = createSlice({
-  name: 'movies',
-  initialState,
-  reducers: {
-    setMovies: (state: any, action) => {
-      let results = action.payload;
-      state.results = [...state.results, ...results];
-    },
-    setLoading: (state, action) => {
-      state.loading = action.payload;
-    },
-    clearData: state => {
-      state.results = [];
-    },
-  },
+export const moviesApi = createApi({
+  reducerPath: 'moviesApi',
+  baseQuery: fetchBaseQuery({
+    baseUrl: BASE_URL,
+  }),
+  endpoints: builder => ({
+    getMovies: builder.query<Movie[], QueryParam>({
+      query: (param:QueryParam) => popularMovies(param.page,param.local),
+      transformResponse:(response:MovieApiResponse)=>{
+        return response.results
+      }
+    }),
+  }),
 });
 
-export const {setMovies, setLoading, clearData} = moviesSlice.actions;
 
-export default moviesSlice.reducer;
+export const {useGetMoviesQuery,useLazyGetMoviesQuery} = moviesApi;

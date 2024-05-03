@@ -13,24 +13,9 @@ const resources = {
   },
 };
 
-
-// const languageDetector = {
-//   type: 'languageDetector',
-//   async: true,
-//   detect: callback => {
-//     const {languageTag} = RNLocalize.findBestAvailableLanguage(
-//       Object.keys(resources),
-//     );
-//     callback(languageTag || 'en');
-//   },
-//   init: () => {},
-//   cacheUserLanguage: () => {},
-// };
-
-
 i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
-  //   .use(languageDetector)
+  .use(initReactI18next) 
+ 
   .init({
     resources,
     fallbackLng: 'en',
@@ -38,7 +23,7 @@ i18n
     debug: true,
     compatibilityJSON: 'v3',
     interpolation: {
-      escapeValue: false, // not needed for React Native
+      escapeValue: false, 
     },
   });
 
