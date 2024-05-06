@@ -10,6 +10,7 @@ import rootReducer from "./reducer";
 const persistConfig = {
   key: "root",
   storage: AsyncStorage,
+  whitelist: ['auth'],
   blacklist: ["moviesApi"],
 };
 

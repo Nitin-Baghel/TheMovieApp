@@ -1,46 +1,61 @@
-import React, { useState, useRef } from 'react';
-import { BlurView } from '@react-native-community/blur';
-import { View, StyleSheet, ImageBackground } from 'react-native';
-import { TextInput, Button, Snackbar, HelperText } from 'react-native-paper';
-import { useTranslation } from 'react-i18next';
-import { PaperSelect } from 'react-native-paper-select';
+import React, { useState, useRef } from "react";
+import { BlurView } from "@react-native-community/blur";
+import { View, StyleSheet, ImageBackground } from "react-native";
+import { TextInput, Button, Snackbar, HelperText } from "react-native-paper";
+import { useTranslation } from "react-i18next";
+import { PaperSelect } from "react-native-paper-select";
+import { useDispatch } from "react-redux";
+import { saveEmailPassword } from "../store/auth/authSlice";
 
 const LoginScreen = ({ navigation }) => {
   const { t, i18n } = useTranslation();
   const singleSelectRef = useRef<any>();
+  const dispatch = useDispatch();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isValidEmail, setIsValidEmail] = useState(true);
+  const [isValidPassword, setIsValidPassword] = useState(true);
   const [snackbarVisible, setSnackbarVisible] = useState(false);
 
   const [language, setLanguage] = useState<any>({
     value: i18n.language,
     list: [
-      { _id: '1', value: 'en' },
-      { _id: '2', value: 'ar' },
+      { _id: "1", value: "en" },
+      { _id: "2", value: "ar" },
     ],
     selectedList: [],
-    error: '',
+    error: "",
   });
 
   const isEmailValid = () => /\S+@\S+\.\S+/.test(email);
   const isPasswordValid = () =>
     /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/.test(
-      password,
+      password
     );
 
-  const isSubmitDisabled = () => !isEmailValid() || !isPasswordValid();
+  const isSubmitDisabled = () => !isValidEmail || !isValidPassword;
 
   const handleSnackbarDismiss = () => setSnackbarVisible(false);
 
   const handleSubmit = () => {
+    if (isSubmitDisabled() || !email || !password || (!email && !password)) {
+      return;
+    }
     setSnackbarVisible(true);
-    navigation.replace('Movies');
+    dispatch(
+      saveEmailPassword({
+        user: { email: email, password: password },
+      })
+    );
+    navigation.replace("Movies");
   };
 
   return (
     <ImageBackground
-      source={{ uri: "https://image.tmdb.org/t/p/w500/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg" }}
+      source={{
+        uri: "https://image.tmdb.org/t/p/w500/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg",
+      }}
       style={styles.imgContainer}
     >
       <BlurView
@@ -49,9 +64,7 @@ const LoginScreen = ({ navigation }) => {
         reducedTransparencyFallbackColor="white"
       />
       <View style={styles.container}>
-
         <View style={styles.languageSelectContainer}>
-
           <PaperSelect
             inputRef={singleSelectRef}
             label="Language"
@@ -62,72 +75,83 @@ const LoginScreen = ({ navigation }) => {
                 ...language,
                 value: value.text,
                 selectedList: value.selectedList,
-                error: '',
+                error: "",
               });
             }}
             arrayList={[...language.list]}
             selectedArrayList={[...language.selectedList]}
             errorText={language.error}
             multiEnable={false}
-            dialogTitleStyle={{ color: 'black' }}
+            dialogTitleStyle={{ color: "black" }}
             textInputMode="flat"
-            textInputStyle={{ fontWeight: '700', color: 'yellow' }}
-
+            textInputStyle={{ fontWeight: "700", color: "yellow" }}
             hideSearchBox={true}
             theme={{
               colors: {
-                text: 'blue',
-                placeholder: 'gray',
+                text: "blue",
+                placeholder: "gray",
               },
             }}
             textInputProps={{
-              outlineColor: 'black',
+              outlineColor: "black",
             }}
             checkboxProps={{
-              checkboxColor: 'blue',
-              checkboxLabelStyle: { color: 'black', fontWeight: '700' },
+              checkboxColor: "blue",
+              checkboxLabelStyle: { color: "black", fontWeight: "700" },
             }}
-            textInputOutlineStyle={{ borderColor: 'red', borderBottomWidth: 10 }}
+            textInputOutlineStyle={{
+              borderColor: "red",
+              borderBottomWidth: 10,
+            }}
           />
         </View>
         <TextInput
-          label={t('email')}
+          label={t("email")}
           value={email}
-          onChangeText={text => setEmail(text)}
+          onChangeText={(text) => {
+            let isValid = isEmailValid();
+            setIsValidEmail(isValid);
+            setEmail(text);
+          }}
           keyboardType="email-address"
           autoCapitalize="none"
         />
-        <HelperText type="error" visible={!isEmailValid()}>
-          {t('enterValidEmail')}
+        <HelperText type="error" visible={!isValidEmail}>
+          {t("enterValidEmail")}
         </HelperText>
         <TextInput
-          label={t('password')}
+          label={t("password")}
           value={password}
-          onChangeText={text => setPassword(text)}
+          onChangeText={(text) => {
+            let isValid = isPasswordValid();
+            setIsValidPassword(isValid);
+            setPassword(text);
+          }}
           secureTextEntry
         />
-        <HelperText type="error" visible={!isPasswordValid()}>
-          {t('passwordRequirements')}
+        <HelperText type="error" visible={!isValidPassword}>
+          {t("passwordRequirements")}
         </HelperText>
         <Button
           mode="contained"
+          style={styles.button}
           onPress={handleSubmit}
-          disabled={isSubmitDisabled()}
-          style={styles.button}>
-          {t('login')}
+        >
+          {t("login")}
         </Button>
 
         <Snackbar
           visible={snackbarVisible}
           onDismiss={handleSnackbarDismiss}
           action={{
-            label: 'Dismiss',
+            label: "Dismiss",
             onPress: handleSnackbarDismiss,
-          }}>
-          {t('loginSuccessful')}
+          }}
+        >
+          {t("loginSuccessful")}
         </Snackbar>
       </View>
-    </ImageBackground >
+    </ImageBackground>
   );
 };
 
@@ -136,23 +160,23 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   languageSelectContainer: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 400,
     right: 20,
     zIndex: 1,
-    borderRadius: 50
+    borderRadius: 50,
   },
   imgContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   absolute: {
     position: "absolute",
     top: 0,
     left: 0,
     bottom: 0,
-    right: 0
+    right: 0,
   },
   button: {
     marginTop: 16,

@@ -1,17 +1,13 @@
-import React, {useEffect } from "react";
-import {
-  View,
-  StyleSheet,
-  FlatList,
-  Text,
-  Dimensions,
-} from "react-native";
-import { Card, IconButton, Title } from "react-native-paper";
+import React from "react";
+import { View, StyleSheet, FlatList, Text, Dimensions } from "react-native";
+import { Card, Title } from "react-native-paper";
+import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
 import useFetchMovies from "../hooks/useFetchMovies";
-import withLoader from "../hoc/withLoader";
 import Loader from "../components/Loader";
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { logout } from "../store/auth/authSlice";
+import responsive from "../utils/responsive";
+import Logout from "../assets/logout.svg";
 
 interface MovieProps {
   title: string;
@@ -24,14 +20,11 @@ export interface MovieStateProps {
   loading: boolean;
 }
 
-const MoviesScreen = ({ navigation, showLoader }) => {
+const MoviesScreen = ({ navigation }) => {
   const { t } = useTranslation();
-  const { data, isError, error, loadMore, isLoadMore, isLoading } =
-    useFetchMovies();
+  const { data, loadMore, isLoadMore } = useFetchMovies();
 
-  useEffect(() => {
-    showLoader(isLoading);
-  }, [isLoading]);
+  const dispatch = useDispatch();
 
   const windowWidth = Dimensions.get("window").width;
 
@@ -51,29 +44,36 @@ const MoviesScreen = ({ navigation, showLoader }) => {
     </Card>
   );
 
+  const handleLogout = () => {
+    dispatch(logout());
+    navigation.replace("Login");
+  };
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <IconButton
-          icon={() => <Icon name="arrow-back" size={24} />}
-          iconColor={"black"}
-          size={20}
-          onPress={() => navigation.navigate("Login")}
-        />
-        <Text style={styles.popularMovieTitle}>{t("popularMovies")}</Text>
-      </View>
+      {data && (
+        <>
+          <View style={styles.header}>
+            <Text style={styles.popularMovieTitle}>{t("popularMovies")}</Text>
+            <Logout
+              width={responsive.width(18)}
+              height={responsive.width(18)}
+              onPress={handleLogout}
+            />
+          </View>
 
-      <FlatList
-        contentContainerStyle={{ flexGrow: 1 }}
-        data={data}
-        renderItem={({ item }) => <MovieItem item={item} />}
-        onEndReached={loadMore}
-        onEndReachedThreshold={0.1}
-        numColumns={2}
-        ListFooterComponent={isLoadMore ? <Loader /> : null}
-        keyExtractor={(item) => `${item.id.toString()}${Math.random()}`}
-      />
+          <FlatList
+            contentContainerStyle={{ flexGrow: 1 }}
+            data={data}
+            renderItem={({ item }) => <MovieItem item={item} />}
+            onEndReached={loadMore}
+            onEndReachedThreshold={0.1}
+            numColumns={2}
+            ListFooterComponent={isLoadMore ? <Loader /> : null}
+            keyExtractor={(item) => `${item.id.toString()}${Math.random()}`}
+          />
+        </>
+      )}
     </View>
   );
 };
@@ -98,15 +98,17 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   popularMovieTitle: {
-    textAlign: "left",
+    // textAlign: "left",
     fontWeight: "bold",
     fontSize: 18,
-    color: "black",
+    color: "gray",
+    marginHorizontal: 7,
   },
   header: {
-    flex: 1,
-    justifyContent: "center",
+    flexDirection: "row",
+    paddingVertical: responsive.padding(10),
+    justifyContent: "space-between",
   },
 });
 
-export default withLoader(MoviesScreen);
+export default MoviesScreen;
