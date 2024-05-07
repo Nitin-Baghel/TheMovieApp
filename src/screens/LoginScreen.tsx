@@ -54,8 +54,9 @@ const LoginScreen = ({ navigation }) => {
   return (
     <ImageBackground
       source={{
-        uri: "https://image.tmdb.org/t/p/w500/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg",
+        uri: "https://image.tmdb.org/t/p/w500/wigZBAmNrIhxp2FNGOROUAeHvdh.jpg",
       }}
+      blurRadius={3}
       style={styles.imgContainer}
     >
       <BlurView
@@ -134,12 +135,15 @@ const LoginScreen = ({ navigation }) => {
         </HelperText>
         <Button
           mode="contained"
-          style={styles.button}
+          style={
+            isSubmitDisabled() || !email || !password || (!email && !password)
+              ? styles.buttonDisabled
+              : styles.button
+          }
           onPress={handleSubmit}
         >
           {t("login")}
         </Button>
-
         <Snackbar
           visible={snackbarVisible}
           onDismiss={handleSnackbarDismiss}
@@ -180,6 +184,12 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 16,
+    padding: 4,
+  },
+  buttonDisabled: {
+    marginTop: 16,
+    padding: 4,
+    opacity: 0.8,
   },
 });
 
