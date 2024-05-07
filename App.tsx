@@ -1,7 +1,6 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { QueryClient, QueryClientProvider } from "react-query";
 import {
   MD3LightTheme as DefaultTheme,
   PaperProvider,
@@ -19,7 +18,6 @@ import SplashScreen from "./src/screens/SplashScreen";
 const Stack = createNativeStackNavigator();
 
 
-const queryClient = new QueryClient();
 const theme = {
   ...DefaultTheme,
   colors: {
@@ -36,7 +34,6 @@ const App: React.FC = () => {
       <PersistGate loading={null} persistor={persistor}>
         <I18nextProvider i18n={i18n}>
           <PaperProvider theme={theme}>
-            <QueryClientProvider client={queryClient}>
               <NavigationContainer>
                 <Stack.Navigator
                   screenOptions={{
@@ -57,7 +54,6 @@ const App: React.FC = () => {
                   />
                 </Stack.Navigator>
               </NavigationContainer>
-            </QueryClientProvider>
           </PaperProvider>
         </I18nextProvider>
       </PersistGate>
