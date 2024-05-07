@@ -70,5 +70,4 @@ Screen 2 : Movie list Screen
 <img  height="600" width="300"  src = "https://github.com/Nitin-Baghel/TheMovieApp/blob/main/src/assets/screenshots/6.png" />
 <img  height="600" width="300"  src = "https://github.com/Nitin-Baghel/TheMovieApp/blob/main/src/assets/screenshots/7.png" />
 <img  height="600" width="300"  src = "https://github.com/Nitin-Baghel/TheMovieApp/blob/main/src/assets/screenshots/8.png" />
-<img  height="600" width="300"  src = "https://github.com/Nitin-Baghel/TheMovieApp/blob/main/src/assets/screenshots/9.png" />
 </p>
